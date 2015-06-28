@@ -28,4 +28,5 @@
     <string name="age">Age:</string>
     <string name="save_user">Save</string>
     <string name="search_user">Search</string>
+    <string name="home_fragment">Home Fragment</string>
 </resources>
