@@ -129,7 +129,7 @@ public class AboutActivity extends ActionBarActivity {
                         .setSmallIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha)
                         .setContentIntent(pendingIntent)
                         .addAction(R.drawable.abc_ic_clear_mtrl_alpha, "Clear", pendingIntent)
-                        .addAction(R.drawable.abc_ab_share_pack_mtrl_alpha, "Shared", pendingIntent)
+                        .addAction(R.drawable.abc_ab_share_pack_holo_light, "Shared", pendingIntent)
                         .build();
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.notify(1, notification);

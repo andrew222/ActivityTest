@@ -76,7 +76,8 @@ public class ProjectActivity extends ActionBarActivity {
     }
 
     @Override
-    public void onStart() {
+    protected void onStart() {
+        super.onStart();
         Toast.makeText(getApplicationContext(), "activity is on started", Toast.LENGTH_LONG).show();
     }
 
