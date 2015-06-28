@@ -50,6 +50,10 @@ public class MainActivity extends ActionBarActivity {
                 Intent profileIntent = new Intent(this, ProfileActivity.class);
                 startActivity(profileIntent);
                 break;
+            case R.id.swipe_refresh:
+                Intent swipeIntent = new Intent(this, SwipeRefresh.class);
+                startActivity(swipeIntent);
+                break;
             default:
                 break;
         }
