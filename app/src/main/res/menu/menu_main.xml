@@ -2,8 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item android:id="@+id/profile"
-        android:title="@string/profile"
-        android:showAsAction="ifRoom" />
+        android:title="@string/profile" />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
@@ -12,4 +11,6 @@
         android:title="@string/about" />
     <item android:id="@+id/project"
         android:title="@string/projects" />
+    <item android:id="@+id/swipe_refresh"
+        android:title="@string/swipe_refresh" />
 </menu>

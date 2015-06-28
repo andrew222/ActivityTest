@@ -44,6 +44,8 @@
                 <action android:name="android.intent.action.Profile"></action>
             </intent-filter>
         </activity>
+        <activity android:name=".SwipeRefresh"
+            android:label="@string/swipe_refresh" />
     </application>
 
 </manifest>

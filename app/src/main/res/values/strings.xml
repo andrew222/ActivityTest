@@ -29,4 +29,5 @@
     <string name="save_user">Save</string>
     <string name="search_user">Search</string>
     <string name="home_fragment">Home Fragment</string>
+    <string name="swipe_refresh">Swipe Refresh</string>
 </resources>
