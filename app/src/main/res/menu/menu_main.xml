@@ -13,4 +13,6 @@
         android:title="@string/projects" />
     <item android:id="@+id/swipe_refresh"
         android:title="@string/swipe_refresh" />
+    <item android:id="@+id/view_page"
+        android:title="View Page" />
 </menu>

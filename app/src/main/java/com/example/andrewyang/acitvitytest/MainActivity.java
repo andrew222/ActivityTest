@@ -54,6 +54,10 @@ public class MainActivity extends ActionBarActivity {
                 Intent swipeIntent = new Intent(this, SwipeRefresh.class);
                 startActivity(swipeIntent);
                 break;
+            case R.id.view_page:
+                Intent viewPageIntent = new Intent(this, ViewPageAcitvity.class);
+                startActivity(viewPageIntent);
+                break;
             default:
                 break;
         }

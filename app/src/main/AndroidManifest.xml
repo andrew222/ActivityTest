@@ -46,6 +46,8 @@
         </activity>
         <activity android:name=".SwipeRefresh"
             android:label="@string/swipe_refresh" />
+        <activity android:name=".ViewPageAcitvity"
+            android:label="View Page" />
     </application>
 
 </manifest>
