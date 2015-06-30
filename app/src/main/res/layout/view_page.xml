@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <TableLayout
         android:stretchColumns="*"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <TableRow
             android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#DDDDDD"
             >
 
             <LinearLayout
                 android:id="@+id/first_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
                     android:text="Tab1"
@@ -22,6 +26,9 @@
 
             <LinearLayout
                 android:id="@+id/second_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FF00"
                 android:orientation="vertical">
                 <TextView
                     android:text="Tab2"
@@ -32,11 +39,11 @@
     </TableLayout>
 
     <include layout="@layout/indicator"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_page"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 </LinearLayout>

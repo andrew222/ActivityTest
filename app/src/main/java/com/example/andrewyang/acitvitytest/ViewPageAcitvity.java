@@ -23,39 +23,13 @@ public class ViewPageAcitvity extends FragmentActivity {
         _adapter = new ViewPagerAdapter(getApplicationContext(), getSupportFragmentManager());
         _mViewPager.setAdapter(_adapter);
         _mViewPager.setCurrentItem(0);
-        _mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                Toast.makeText(getApplicationContext(), "Scrolled", Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                Log.d("On Page Selected", "" + position);
-                switch (position) {
-                    case 0:
-                        findViewById(R.id.first_tab).setVisibility(View.VISIBLE);
-                        findViewById(R.id.second_tab).setVisibility(View.INVISIBLE);
-                        break;
-                    case 1:
-                        findViewById(R.id.first_tab).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.second_tab).setVisibility(View.VISIBLE);
-                        break;
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+        setTab();
     }
 
     private void setTab() {
         _mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                Log.d("setTab", "page scrolled");
             }
 
             @Override

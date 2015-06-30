@@ -11,14 +11,15 @@
             android:id="@+id/tableRow1"
             android:background="#DDDDDD">
             <LinearLayout
-                android:orientation="vertical"
+                style="@style/indicate"
                 android:id="@+id/first_tab"></LinearLayout>
             <LinearLayout
-                android:orientation="vertical"
+                style="@style/indicate"
                 android:id="@+id/second_tab"
                 android:visibility="invisible"></LinearLayout>
         </TableRow>
     </TableLayout>
     <LinearLayout
-        style="@style/h_line"></LinearLayout>
+        style="@style/h_line"
+        android:orientation="vertical"></LinearLayout>
 </LinearLayout>

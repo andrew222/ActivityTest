@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by andrewyang on 2015/6/29.
@@ -21,6 +23,7 @@ public class LayoutOne extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_one, null);
+        TextView title = (TextView) root.findViewById(R.id.title);
         return  root;
     }
 }
