@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,7 +52,7 @@ public class ProjectActivity extends ActionBarActivity {
                     case 1:
                         try {
                             getSupportActionBar().hide();
-                        }catch (NullPointerException ne) {
+                        } catch (NullPointerException ne) {
                             ne.printStackTrace();
                         }
                         break;
@@ -60,10 +61,10 @@ public class ProjectActivity extends ActionBarActivity {
                             getSupportActionBar().show();
                             try {
                                 pendingIntent.send();
-                            }catch (PendingIntent.CanceledException ce) {
+                            } catch (PendingIntent.CanceledException ce) {
                                 ce.printStackTrace();
                             }
-                        }catch (NullPointerException ne) {
+                        } catch (NullPointerException ne) {
                             ne.printStackTrace();
                         }
                         break;
@@ -73,6 +74,8 @@ public class ProjectActivity extends ActionBarActivity {
                 }
             }
         });
+
+
     }
 
     @Override

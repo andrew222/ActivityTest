@@ -60,8 +60,6 @@ public class SettingActivity extends ActionBarActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
         mTitle = mActivityTitle = getTitle().toString();
-
-
     }
 
     @Override
@@ -110,7 +108,7 @@ public class SettingActivity extends ActionBarActivity {
         Fragment fragment  = null;
         switch (position) {
             case 0:
-                fragment = new UbertagsFragment();
+                fragment = new UbertagsFragment(getApplicationContext());
                 mTitle = getString(R.string.ubertags);
                 break;
             case 1:

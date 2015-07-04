@@ -30,4 +30,5 @@
     <string name="search_user">Search</string>
     <string name="home_fragment">Home Fragment</string>
     <string name="swipe_refresh">Swipe Refresh</string>
+    <string name="start_context_menu">Start Context Menu</string>
 </resources>

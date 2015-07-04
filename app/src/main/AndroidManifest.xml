@@ -48,6 +48,8 @@
             android:label="@string/swipe_refresh" />
         <activity android:name=".ViewPageAcitvity"
             android:label="View Page" />
+        <activity android:name=".ProfilePreferenceActivity"
+            android:label="Profile Setting" />
     </application>
 
 </manifest>

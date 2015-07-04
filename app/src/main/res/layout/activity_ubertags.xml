@@ -1,5 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:orientation="vertical"
@@ -9,7 +11,8 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:text="Button Test"
+        android:id="@+id/startContextMenu"
+        android:text="@string/start_context_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
