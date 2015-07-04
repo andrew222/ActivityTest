@@ -1,10 +1,8 @@
 package com.example.andrewyang.acitvitytest;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.widget.FrameLayout;
 
 /**
  * Created by andrewyang on 2015/7/4.

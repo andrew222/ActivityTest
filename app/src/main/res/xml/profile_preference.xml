@@ -6,5 +6,9 @@
             android:key="name"
             android:title="@string/user_name"
             android:summary="@string/user_name" />
+        <CheckBoxPreference
+            android:key="wifi"
+            android:title="Wifi" />
+
     </PreferenceCategory>
 </PreferenceScreen>
