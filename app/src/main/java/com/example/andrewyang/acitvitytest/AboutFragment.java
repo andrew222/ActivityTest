@@ -28,7 +28,7 @@ public class AboutFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        aboutActivity.findViewById(R.id.displayAboutFragment).setVisibility(View.INVISIBLE);
+        aboutActivity.findViewById(R.id.displayAboutFragment).setVisibility(View.GONE);
         aboutActivity.findViewById(R.id.hideAboutFragment).setVisibility(View.VISIBLE);
     }
 
@@ -36,6 +36,6 @@ public class AboutFragment extends Fragment {
     public void onPause() {
         super.onPause();
         aboutActivity.findViewById(R.id.displayAboutFragment).setVisibility(View.VISIBLE);
-        aboutActivity.findViewById(R.id.hideAboutFragment).setVisibility(View.INVISIBLE);
+        aboutActivity.findViewById(R.id.hideAboutFragment).setVisibility(View.GONE);
     }
 }

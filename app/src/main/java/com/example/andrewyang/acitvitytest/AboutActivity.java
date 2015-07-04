@@ -116,7 +116,6 @@ public class AboutActivity extends ActionBarActivity {
                 fragmentTransaction.commit();
                 break;
             case R.id.hideAboutFragment:
-                Toast.makeText(getApplicationContext(), "Pop fragment", Toast.LENGTH_LONG).show();
                 getFragmentManager().popBackStack();
                 Intent intent = new Intent(this, ProjectActivity.class);
                 TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this);
