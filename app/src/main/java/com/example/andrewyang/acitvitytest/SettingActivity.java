@@ -114,7 +114,10 @@ public class SettingActivity extends ActionBarActivity {
             case 1:
                 fragment = new FigaroFragment();
                 mTitle = "Figaro";
-
+                break;
+            case 2:
+                fragment = new WebspiderFragment();
+                mTitle = "Webspider";
                 break;
             default:
                 fragment = new HomeFragment();
