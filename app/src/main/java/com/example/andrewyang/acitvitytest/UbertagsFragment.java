@@ -29,12 +29,12 @@ public class UbertagsFragment extends Fragment {
     Context rootContext;
     public TextView user_setting;
 
-    public UbertagsFragment(Context context) {
-        rootContext = context;
-    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        SettingActivity activity = (SettingActivity) getActivity();
+        rootContext = activity.getApplicationContext();
     }
 
     @Nullable
