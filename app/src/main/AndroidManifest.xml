@@ -50,6 +50,8 @@
             android:label="View Page" />
         <activity android:name=".ProfilePreferenceActivity"
             android:label="Profile Setting" />
+        <activity android:name=".CommentDatabaseActivity"
+            android:label="Comment Database" />
     </application>
 
 </manifest>

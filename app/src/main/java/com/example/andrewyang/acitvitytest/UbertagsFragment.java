@@ -42,7 +42,6 @@ public class UbertagsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.activity_ubertags, container, false);
 
-        Button startContextBtn = (Button) rootView.findViewById(R.id.startContextMenu);
         registerForContextMenu(rootView);
         user_setting = (TextView) rootView.findViewById(R.id.user_setting);
 

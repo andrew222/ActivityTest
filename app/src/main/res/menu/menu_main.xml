@@ -15,4 +15,6 @@
         android:title="@string/swipe_refresh" />
     <item android:id="@+id/view_page"
         android:title="View Page" />
+    <item android:id="@+id/sqlite_helper"
+        android:title="@string/sqlite_helper" />
 </menu>
