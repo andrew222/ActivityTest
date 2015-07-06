@@ -12,6 +12,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -31,12 +33,14 @@ public class AboutActivity extends ActionBarActivity {
     TextView title;
     public FragmentManager fragmentManager;
     public AlertDialog alertDialog;
+    public CoordinatorLayout rootLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         title = (TextView) findViewById(R.id.title_of_about);
+        rootLayout = (CoordinatorLayout) findViewById(R.id.layoutRoot);
     }
 
     @Override
@@ -100,7 +104,13 @@ public class AboutActivity extends ActionBarActivity {
                         .setItems(projects, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getApplicationContext(), "" + projects[which], Toast.LENGTH_LONG).show();
+                            Snackbar.make(rootLayout, "" + projects[which], Snackbar.LENGTH_LONG)
+                                    .setAction("Undo", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Toast.makeText(getApplicationContext(), "Undo", Toast.LENGTH_LONG).show();
+                                        }
+                                    }).show();
                             }
                         })
                         .create();

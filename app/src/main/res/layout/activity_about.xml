@@ -44,5 +44,20 @@
         android:id="@+id/aboutFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnFloatingAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_plus"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"/>
+
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>
