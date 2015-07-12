@@ -17,4 +17,10 @@
         <item name="android:background">#0000FF</item>
         <item name="android:orientation">vertical</item>
     </style>
+    <style name="red_background">
+        <item name="android:background">#FF0000</item>
+    </style>
+    <style name="red_background.large_font_size">
+        <item name="android:textSize">12dp</item>
+    </style>
 </resources>
