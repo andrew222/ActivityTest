@@ -8,6 +8,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,6 +31,7 @@ public class SettingActivity extends ActionBarActivity {
     private String mTitle;
     private String mActivityTitle;
     private SwipeRefreshLayout swipeLayout;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class SettingActivity extends ActionBarActivity {
         mDrawerList = (ListView) findViewById(R.id.drawer_menu);
         ArrayAdapter<String> projectsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, projects);
         mDrawerList.setAdapter(projectsAdapter);
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
