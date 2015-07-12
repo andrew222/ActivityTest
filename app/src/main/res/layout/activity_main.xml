@@ -5,9 +5,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/tool_bar" />
     <TextView
         android:id="@+id/main_activity_title"
         android:layout_width="wrap_content"
@@ -16,5 +13,11 @@
         android:textStyle="bold"
         android:textColor="#9600FF00"
         android:text="@string/hello_world" />
-
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"></ListView>
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
 </LinearLayout>
