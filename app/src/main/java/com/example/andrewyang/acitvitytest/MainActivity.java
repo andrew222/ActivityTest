@@ -9,15 +9,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import org.androidannotations.annotations.ViewById;
+
 public class MainActivity extends ActionBarActivity {
+    @ViewById
+    TextView main_activity_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView title = (TextView) findViewById(R.id.main_activity_title);
-        ObjectAnimator oa = ObjectAnimator.ofFloat(title,"rotationY", 0.0f, 360f);
+        ObjectAnimator oa = ObjectAnimator.ofFloat(main_activity_title,"rotationY", 0.0f, 360f);
         oa.setDuration(3600);
         oa.setRepeatCount(ObjectAnimator.INFINITE);
         oa.start();
