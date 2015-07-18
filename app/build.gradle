@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'android-apt'
+def AAVersion = '3.3.2'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.0.1"
@@ -35,9 +37,10 @@ android {
         abortOnError false
     }
 }
-ext.androidAnnotationsVersion = '3.3.2';
-configurations {
-    apt
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+    }
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -45,7 +48,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:22.2.0'
     compile 'com.android.support:support-v4:22.2.0'
     compile 'com.android.support:design:22.2.0'
-    apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
-    compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
-    compile 'org.spearce:jgit:0.4-47e4af3'
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
 }
