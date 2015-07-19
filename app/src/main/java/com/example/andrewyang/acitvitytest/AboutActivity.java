@@ -26,22 +26,23 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.res.StringArrayRes;
 import org.w3c.dom.Text;
 
-
-public class AboutActivity extends ActionBarActivity {
-    TextView title;
+@EActivity(R.layout.activity_about)
+public class AboutActivity extends Activity {
     public FragmentManager fragmentManager;
     public AlertDialog alertDialog;
-    public CoordinatorLayout rootLayout;
+    @ViewById(R.id.title_of_about)
+    TextView title;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        title = (TextView) findViewById(R.id.title_of_about);
-        rootLayout = (CoordinatorLayout) findViewById(R.id.layoutRoot);
-    }
+    @ViewById(R.id.layoutRoot)
+    CoordinatorLayout rootLayout;
+
+    @StringArrayRes(R.array.projects_name)
+    String[] projects;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -97,7 +98,6 @@ public class AboutActivity extends ActionBarActivity {
                 break;
             case R.id.startAnimate:
                 Animation anim = AnimationUtils.loadAnimation(this, R.anim.twin);
-                final String[] projects = getResources().getStringArray(R.array.projects_name);
 
                 alertDialog = new AlertDialog.Builder(this)
                         .setTitle("Please one project")

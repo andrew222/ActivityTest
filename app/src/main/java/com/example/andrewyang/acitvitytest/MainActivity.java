@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
 
         switch (id) {
             case R.id.about:
-                Intent aboutIntent = new Intent(this, AboutActivity.class);
+                Intent aboutIntent = new Intent(this, AboutActivity_.class);
                 startActivity(aboutIntent);
                 break;
             case R.id.project:
