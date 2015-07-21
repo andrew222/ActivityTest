@@ -1,9 +1,18 @@
 package com.example.andrewyang.acitvitytest;
 
 import android.app.Activity;
+import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.net.Uri;
+import android.opengl.Visibility;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.design.widget.Snackbar;
 import android.util.JsonReader;
 import android.util.JsonWriter;
 import android.view.View;
@@ -12,6 +21,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
 import org.w3c.dom.Text;
 
 import java.io.IOError;
@@ -22,11 +33,17 @@ import java.io.OutputStreamWriter;
 /**
  * Created by andrewyang on 2015/6/25.
  */
+@EActivity
 public class ProfileActivity extends Activity {
     public EditText user_name;
     public EditText age;
     public TextView user_name_tv;
     public TextView age_tv;
+    public DownloadManager downloadManager;
+    public long myDownloadReference;
+    public String downloadFileUrl = "http://www.101apps.co.za/images/android/articles/DownloadManager/screenshotDouble.png";
+    private BroadcastReceiver receiverDownloadCompltete;
+    private BroadcastReceiver receiverNotificationClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +58,8 @@ public class ProfileActivity extends Activity {
 
         user_name_tv = (TextView) findViewById(R.id.user_name_tv);
         age_tv = (TextView) findViewById(R.id.age_tv);
+
+        downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
     }
 
     @Override
@@ -104,5 +123,30 @@ public class ProfileActivity extends Activity {
             default:
                 break;
         }
+    }
+
+    @Click
+    void download_image() {
+        Uri uri = Uri.parse(downloadFileUrl);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setDestinationInExternalFilesDir(ProfileActivity.this, Environment.DIRECTORY_DOWNLOADS, "logo.png");
+        request.setTitle("Notification Title").setDescription("My Download");
+        request.setVisibleInDownloadsUi(true);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
+        myDownloadReference = downloadManager.enqueue(request);
+        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_NOTIFICATION_CLICKED);
+        receiverNotificationClicked = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String extraId = DownloadManager.EXTRA_NOTIFICATION_CLICK_DOWNLOAD_IDS;
+                long[] references = intent.getLongArrayExtra(extraId);
+                for(long reference : references) {
+                    if(reference == myDownloadReference) {
+                        Toast.makeText(getApplicationContext(), "Download Completed", Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+        };
+        registerReceiver(receiverNotificationClicked, filter);
     }
 }

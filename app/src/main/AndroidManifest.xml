@@ -22,7 +22,7 @@
 
         <service android:name=".MyService" android:enabled="true" android:exported="false" />
 
-        <activity android:name=".ProfileActivity" android:label="@string/profile">
+        <activity android:name=".ProfileActivity_" android:label="@string/profile">
             <intent-filter>
                 <action android:name="android.intent.action.Profile" />
             </intent-filter>
@@ -36,5 +36,7 @@
         <activity android:name=".SlidingTab_"
             android:label="@string/title_activity_sliding_tab"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 </manifest>

@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(settingIntent);
                 break;
             case R.id.profile:
-                Intent profileIntent = new Intent(this, ProfileActivity.class);
+                Intent profileIntent = new Intent(this, ProfileActivity_.class);
                 startActivity(profileIntent);
                 break;
             case R.id.swipe_refresh:
@@ -76,7 +76,7 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case R.id.sqlite_helper:
                 Intent intent = new Intent(this, CommentDatabaseActivity.class);
-                startActivity(intent); 
+                startActivity(intent);
                 break;
             case R.id.material_tab_host:
                 Intent material_intent = new Intent(this, MaterialTabsActivity_.class);
