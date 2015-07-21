@@ -1,68 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.andrewyang.acitvitytest" >
+    package="com.example.andrewyang.acitvitytest">
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".MainActivity_"
-            android:label="@string/app_name" >
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity_" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AboutActivity_"
-            android:label="@string/title_activity_about"
-            android:parentActivityName=".MainActivity" >
-        </activity>
-        <activity
-            android:name=".ProjectActivity"
-            android:label="@string/title_activity_project"
-            android:parentActivityName=".MainActivity" >
-        </activity>
-        <activity
-            android:name=".UbertagsActivity"
-            android:label="@string/title_activity_ubertags" >
-        </activity>
-        <activity
-            android:name=".SettingActivity"
-            android:label="@string/title_activity_setting" >
-        </activity>
+        <activity android:name=".AboutActivity_" android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".ProjectActivity" android:label="@string/title_activity_project"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".UbertagsActivity"
+            android:label="@string/title_activity_ubertags"></activity>
+        <activity android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"></activity>
 
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="false" />
+        <service android:name=".MyService" android:enabled="true" android:exported="false" />
 
-        <activity
-            android:name=".ProfileActivity"
-            android:label="@string/profile" >
+        <activity android:name=".ProfileActivity" android:label="@string/profile">
             <intent-filter>
                 <action android:name="android.intent.action.Profile" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SwipeRefresh"
-            android:label="@string/swipe_refresh" />
-        <activity
-            android:name=".ViewPageAcitvity"
-            android:label="View Page" />
-        <activity
-            android:name=".ProfilePreferenceActivity"
-            android:label="Profile Setting" />
-        <activity
-            android:name=".CommentDatabaseActivity"
-            android:label="Comment Database" />
-        <activity
-            android:name=".MaterialTabsActivity_"
-            android:label="@string/title_activity_material_tabs" >
-        </activity>
+        <activity android:name=".SwipeRefresh" android:label="@string/swipe_refresh" />
+        <activity android:name=".ViewPageAcitvity" android:label="View Page" />
+        <activity android:name=".ProfilePreferenceActivity" android:label="Profile Setting" />
+        <activity android:name=".CommentDatabaseActivity" android:label="Comment Database" />
+        <activity android:name=".MaterialTabsActivity_"
+            android:label="@string/title_activity_material_tabs"></activity>
+        <activity android:name=".SlidingTab_"
+            android:label="@string/title_activity_sliding_tab"></activity>
     </application>
 
 </manifest>

@@ -19,4 +19,6 @@
         android:title="@string/sqlite_helper" />
     <item android:id="@+id/material_tab_host"
         android:title="@string/material_tabs" />
+    <item android:id="@+id/sliding_tab"
+        android:title="@string/sliding_tab" />
 </menu>

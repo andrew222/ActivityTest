@@ -70,9 +70,13 @@ public class MainActivity extends ActionBarActivity {
                 Intent viewPageIntent = new Intent(this, ViewPageAcitvity.class);
                 startActivity(viewPageIntent);
                 break;
+            case R.id.sliding_tab:
+                Intent slidingTab = new Intent(this, SlidingTab_.class);
+                startActivity(slidingTab );
+                break;
             case R.id.sqlite_helper:
                 Intent intent = new Intent(this, CommentDatabaseActivity.class);
-                startActivity(intent);
+                startActivity(intent); 
                 break;
             case R.id.material_tab_host:
                 Intent material_intent = new Intent(this, MaterialTabsActivity_.class);
