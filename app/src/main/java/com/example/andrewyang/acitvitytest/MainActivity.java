@@ -74,6 +74,9 @@ public class MainActivity extends ActionBarActivity {
                 Intent intent = new Intent(this, CommentDatabaseActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.material_tab_host:
+                Intent material_intent = new Intent(this, MaterialTabsActivity_.class);
+                startActivity(material_intent);
             default:
                 break;
         }

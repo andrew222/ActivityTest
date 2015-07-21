@@ -35,23 +35,34 @@
             android:label="@string/title_activity_setting" >
         </activity>
 
-        <service android:name=".MyService"
+        <service
+            android:name=".MyService"
             android:enabled="true"
             android:exported="false" />
-        <activity android:name=".ProfileActivity"
-            android:label="@string/profile">
+
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/profile" >
             <intent-filter>
-                <action android:name="android.intent.action.Profile"></action>
+                <action android:name="android.intent.action.Profile" />
             </intent-filter>
         </activity>
-        <activity android:name=".SwipeRefresh"
+        <activity
+            android:name=".SwipeRefresh"
             android:label="@string/swipe_refresh" />
-        <activity android:name=".ViewPageAcitvity"
+        <activity
+            android:name=".ViewPageAcitvity"
             android:label="View Page" />
-        <activity android:name=".ProfilePreferenceActivity"
+        <activity
+            android:name=".ProfilePreferenceActivity"
             android:label="Profile Setting" />
-        <activity android:name=".CommentDatabaseActivity"
+        <activity
+            android:name=".CommentDatabaseActivity"
             android:label="Comment Database" />
+        <activity
+            android:name=".MaterialTabsActivity_"
+            android:label="@string/title_activity_material_tabs" >
+        </activity>
     </application>
 
 </manifest>

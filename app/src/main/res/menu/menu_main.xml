@@ -17,4 +17,6 @@
         android:title="View Page" />
     <item android:id="@+id/sqlite_helper"
         android:title="@string/sqlite_helper" />
+    <item android:id="@+id/material_tab_host"
+        android:title="@string/material_tabs" />
 </menu>

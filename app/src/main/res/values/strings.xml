@@ -31,6 +31,8 @@
     <string name="home_fragment">Home Fragment</string>
     <string name="swipe_refresh">Swipe Refresh</string>
     <string name="sqlite_helper">SQLite Helper</string>
+    <string name="material_tabs">Material Tabs</string>
     <string name="add_comment">Add Comment</string>
     <string name="delete_comment">Delete Comment</string>
+    <string name="title_activity_material_tabs">MaterialTabsActivity</string>
 </resources>

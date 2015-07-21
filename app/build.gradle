@@ -50,4 +50,5 @@ dependencies {
     compile 'com.android.support:design:22.2.0'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile 'it.neokree:MaterialTabs:0.11'
 }
